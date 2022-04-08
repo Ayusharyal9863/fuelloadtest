@@ -17,11 +17,11 @@ done
 
 # get highest tag number, and add v0.1.0 if doesn't exist
 git fetch --prune --unshallow 2>/dev/null
-CURRENT_VERSION=`git describe --match "s*" --abbrev=0 --tags 2>/dev/null`
+CURRENT_VERSION=`git describe --all --match "s*" --abbrev=0 --tags 2>/dev/null`
 
 if [[ $CURRENT_VERSION == '' ]]
 then
-  CURRENT_VERSION='s0.1.5'
+  CURRENT_VERSION='s0.1.0'
 fi
 echo "Current Version: $CURRENT_VERSION"
 
