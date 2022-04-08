@@ -21,7 +21,7 @@ CURRENT_VERSION=`git describe --all --match "s*" --abbrev=0 --tags 2>/dev/null`
 
 if [[ $CURRENT_VERSION == '' ]]
 then
-  CURRENT_VERSION='s0.1.0'
+  CURRENT_VERSION='a0.1.0'
 fi
 echo "Current Version: $CURRENT_VERSION"
 
