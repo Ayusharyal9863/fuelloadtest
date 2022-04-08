@@ -3,7 +3,7 @@ on:
   push:
     branches: [ testversion ]
     
-# The following jobs are initiated when there is push in the Release-v0.1-dev branch with Tagas.    
+# The following jobs are initiated when there is push in the Release-v0.1-dev branch with Tags.    
 jobs:
   build:
     name: Build Image
