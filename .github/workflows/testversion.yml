@@ -1,0 +1,20 @@
+name: Test Version
+on:
+  push:
+    branches: [ testversion ]
+    
+# The following jobs are initiated when there is push in the Release-v0.1-dev branch with Tag.    
+jobs:
+  build:
+    name: Build Image
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+    
+
+    # Generate Tags according to script in the folder Tagbuild as minor.  
+    - name: Automatic Tagging of Releases
+      id: increment-git-tag
+      run: |
+        bash ./Tagbuild/git_update.sh -v patch
