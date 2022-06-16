@@ -15,6 +15,6 @@ jobs:
 
     # Generate Tags according to script in the folder Tagbuild as minor.  
     - name: Automatic Tagging of Releases
-      id: increment-git-tag
+      id: git-tag
       run: |
-        bash ./Tagbuild/git_update.sh -v patch
+        bash ./Tagbuild/git_update.sh 
