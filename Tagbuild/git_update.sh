@@ -7,7 +7,7 @@
 
 
 # create new tag
-NEW_TAG=`git rev-parse --short=10 HEAD.trim()`
+NEW_TAG=`git rev-parse --short=10 HEAD.trim`
 echo "($VERSION) updating $CURRENT_VERSION to $NEW_TAG"
 
 # get current hash and see if it already has a tag
